@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Container from "@/components/atoms/Container";
-import Table from "@/components/atoms/Table";
 import TextField from "@/components/atoms/TextField";
-import { useAppDispatch, useAppSelector } from "@/store";
-import { useGetUserQuery } from "@/services/User";
-import type { ITableData } from "@/types/user";
-import { setUsers, setUserDetail, initialDetails, setTotal } from "./slice";
-import NotFound from "@/components/atoms/NotFound";
 import Button from "@/components/atoms/Button";
+import NotFound from "@/components/atoms/NotFound";
 import UserModal from "@/components/molecules/UserModal";
-import { API } from "@/utils/constants/url";
+import Table from "@/components/organisms/Table";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { setUsers, setUserDetail, initialDetails, setTotal } from "./slice";
+import { useGetUserQuery } from "@/services/User";
 import { useDebounce } from "@/hooks/useDebounce";
+import type { ITableData } from "@/types/user";
+import { API } from "@/utils/constants/url";
 
 const Users: React.FC = () => {
   const dispatch = useAppDispatch();

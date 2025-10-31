@@ -18,7 +18,7 @@ vi.mock("@/services/User", () => ({
 }));
 
 // Mock child components
-vi.mock("@/components/atoms/Table", () => ({
+vi.mock("@/components/organisms/Table", () => ({
   default: ({ data }: any) => (
     <div data-testid="table">{JSON.stringify(data)}</div>
   ),

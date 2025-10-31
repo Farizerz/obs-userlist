@@ -13,10 +13,10 @@ import Paper from "@mui/material/Paper";
 import TableSortLabel from "@mui/material/TableSortLabel";
 import { useAppDispatch, useAppSelector } from "@/store";
 import Button from "@/components/atoms/Button";
-import { setUsers, setUserDetail, initialDetails } from "@/pages/User/slice";
-import type { ITableData } from "@/types/user";
 import ConfirmModal from "@/components/molecules/ConfirmModal";
 import UserModal from "@/components/molecules/UserModal";
+import { setUsers, setUserDetail, initialDetails } from "@/pages/User/slice";
+import type { ITableData } from "@/types/user";
 import { useOpenToast } from "@/hooks/useOpenToast";
 
 type Order = "asc" | "desc";
@@ -116,7 +116,7 @@ export default function EnhancedTable({
   return (
     <>
       <ConfirmModal
-        title={`Delete ${userDetail.username}?`}
+        title={`Delete ${userDetail?.username}?`}
         open={openModal.confirm}
         onClose={() => setOpenModal({ ...openModal, confirm: false })}
         onConfirm={() => handleDelete(userDetail.id)}
