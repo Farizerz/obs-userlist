@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-xs: 0px; /* Extra-small phones */
+  --breakpoint-sm: 640px; /* Small devices (default kept) */
+  --breakpoint-md: 768px; /* Tablets */
+  --breakpoint-lg: 1024px; /* Laptops */
+  --breakpoint-xl: 1280px; /* Desktops */
+  --breakpoint-2xl: 1536px; /* Large desktops */
+  --breakpoint-3xl: 1800px; /* Extra-large */
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Colors */
+  --color-primary: #1976d2;
+  --color-secondary: #30c8e9;
+  --color-border: #e7eaf1;
+  --color-lightgray: #68788d;
+  --color-lightgray2: #f5f7f9;
+  --color-lightgray3: #f7f9fc;
+  --color-gray: #c4c4c4;
+  --color-darkgray: #666666;
+}
+
+@layer base {
+  h1 {
+    @apply text-[1.25rem] font-semibold;
+  }
+  h2 {
+    @apply text-[0.875rem] font-semibold;
+  }
+  p {
+    @apply text-[0.875rem];
+  }
+}
+
+@layer utilities {
+  .bg-gradient {
+    background-image: linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+  }
+}
