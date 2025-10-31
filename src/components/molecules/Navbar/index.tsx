@@ -4,7 +4,7 @@ import { BellIcon } from "@/assets";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="w-full h-[72px] border-1 border-border bg-white bg-white fixed z-[1] sm:pl-[252px]">
+    <div className="w-full h-[72px] border-1 border-border bg-white bg-white fixed z-[2] sm:pl-[252px]">
       <Container className="flex items-center justify-between">
         <h1>User</h1>
         <div className="flex flex-row gap-2 items-center ">
