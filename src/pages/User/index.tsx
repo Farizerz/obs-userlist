@@ -12,6 +12,8 @@ import { useDebounce } from "@/hooks/useDebounce";
 import type { ITableData } from "@/types/user";
 import { API } from "@/utils/constants/url";
 
+const debounceTimeout: number = 500;
+
 const Users: React.FC = () => {
   const dispatch = useAppDispatch();
 
@@ -21,7 +23,7 @@ const Users: React.FC = () => {
   const [query, setQuery] = useState<string>("");
   const [openModal, setOpenModal] = useState<boolean>(false);
 
-  const debouncedSearch = useDebounce(query, 500);
+  const debouncedSearch = useDebounce(query, debounceTimeout);
 
   useEffect(() => {
     if (data) {
