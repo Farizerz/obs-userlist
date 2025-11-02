@@ -189,7 +189,7 @@ const UserModal: React.FC<IUserModal> = ({ open, onClose }) => {
           <TextField
             label="City"
             error={!!errors.address}
-            helperText={"City is required"}
+            helperText={!!errors.address && "City is required"}
             variant="standard"
             value={formData.address.city}
             onChange={(e) =>
@@ -205,7 +205,7 @@ const UserModal: React.FC<IUserModal> = ({ open, onClose }) => {
           <TextField
             label="Zipcode"
             error={!!errors.address}
-            helperText={"Zipcode is required"}
+            helperText={!!errors.address && "Zipcode is required"}
             variant="standard"
             value={formData.address.zipcode}
             onChange={(e) =>
